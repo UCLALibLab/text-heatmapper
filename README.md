@@ -39,20 +39,15 @@ mpld3 and palettable.
 When successful, this script produces the following files in the
 same directory:
 
-words_heatmap.png
-:  heatmap + dendrogram plot of 1/2/3-gram document term similarity using middle 98% of frequencies, TF-IDF weighting, cosine similarity
+* words_heatmap.png: heatmap + dendrogram plot of 1/2/3-gram document term similarity using middle 98% of frequencies, TF-IDF weighting, cosine similarity
 
-LDA_heatmap.png
-:  heatmap + dendrogram plot of document topic similarities, computed by training a 100-topic model on the documents with LDA, then inferring the likelihood of each document given every other document
+* LDA_heatmap.png: heatmap + dendrogram plot of document topic similarities, computed by training a 100-topic model on the documents with LDA, then inferring the likelihood of each document given every other document
 
-entropy_heatmap.png
-:  heatmap + dendrogram + line graph plot of the absolute (vertical line graph) and relative (heatmap) Shannon entropies of the documents
-similarityClusters.png
+* entropy_heatmap.png: heatmap + dendrogram + line graph plot of the absolute (vertical line graph) and relative (heatmap) Shannon entropies of the documents
 
-:  output of k-means clustering with multidimensional scaling of the term similarity matrix computed for the words_heatmap
-similarityClusters.html
+* similarityClusters.png: output of k-means clustering with multidimensional scaling of the term similarity matrix computed for the words_heatmap
 
-:  interactive HTML version of the term similarity clustering plot (only works on Mac)
+* similarityClusters.html: interactive HTML version of the term similarity clustering plot (only works on Mac)
 
 ## OTHER NOTES
 
