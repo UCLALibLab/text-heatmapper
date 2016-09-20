@@ -55,13 +55,13 @@ import os
 
 import sys
 # Get the names of documents file and the labels file from the
-# command line
+# command line (or alter this code to specify the file paths here)
 docsfile = sys.argv[1]
 labelsfile = sys.argv[2]
 
-# Set this to "False" to recompute all data structures and save them to
-# cache files. Otherwise, the script will attempt to load them
-useCachedfiles = True 
+# Set this to "True" to save most data structures to local cache files and
+# attempt to load them the next time the script is run.
+useCachedfiles = False
 
 # Function to compute the Shannon entropy of a string
 def stringEntropy(instr):
