@@ -46,14 +46,12 @@ main working directory:
 
 * similarityClusters.png: output of k-means clustering with multidimensional scaling of the term similarity matrix computed for the words_heatmap
 
-* similarityClusters.html: interactive HTML version of the term similarity clustering plot (only works on Mac)
+* similarityClusters.html: interactive HTML version of the term similarity clustering plot
 
 ## OTHER NOTES
 
 * It's possible to override previously cached results by setting the 
 useCachedFiles variable to "False" or just manually deleting all .pkl files
 in the working directory.
-* The working directory may need to be set below in order for the script to
-run successfully in Windows.
-* Also, the final portion of the script is only able to generate the
-interactive HTML cluster file on Mac OS X, not Windows. I have no idea why.
+* The working directory may need to be set in the code in order for the script 
+to run successfully in Windows.

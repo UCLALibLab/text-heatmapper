@@ -61,7 +61,7 @@ labelsfile = sys.argv[2]
 
 # Set this to "True" to save most data structures to local cache files and
 # attempt to load them the next time the script is run.
-useCachedfiles = False
+useCachedfiles = True 
 
 # Function to compute the Shannon entropy of a string
 def stringEntropy(instr):
@@ -372,16 +372,20 @@ entityColors = {}
 #note that I use the cluster_name and cluster_color dicts with the 'name' lookup to return the appropriate color/label
 for name, group in groups:
 
+    # If the document set contains more than one major collection, this
+    # variable could be used to trigger different plotting behavior for
+    # each collection. But for now, we'll just treat it as a single collection.
     thisAnth="docs"
-    entityName = name.split('_')[-1].strip().replace(u'　','')
+    # Just use the first item in the bundle label as the "entity ID", which
+    # is assigned a specific color in the plot and on the legend (if enabled).
+    # Obviously this could be altered to use different portions of the label.
+    entityName = name.split('_')[0].strip().replace(u'　','')
     if (entityName in entityIDs):
       entityID = entityIDs[entityName]
     else:
       entityCount += 1
       entityIDs[entityName] = entityCount
       entityID = entityCount
-
-    print "thisAnth is " + thisAnth
 
     if (entityName in entityColors):
       entityColor = entityColors[entityName]
@@ -393,8 +397,6 @@ for name, group in groups:
         entityColor = '#252525' 
       entityColors[entityName] = entityColor
     
-    print "color for " + entityName + " is " + str(entityColor)
-
     ax.plot(group.x, group.y, marker='o', linestyle='', ms=12, 
             label=entityName, color=entityColor, 
             mec='none')
@@ -476,7 +478,9 @@ ax.margins(0.02) # Optional, just adds 5% padding to the autoscaling
 #iterate through groups to layer the plot
 #note that I use the cluster_name and cluster_color dicts with the 'name' lookup to return the appropriate color/label
 for name, group in groups:
-    entityName = name.split('_')[-1]
+    # See above for the entity naming conventions (this is not the only
+    # way to do this, of course)
+    entityName = name.split('_')[0]
 
     points = ax.plot(group.x, group.y, marker='o', linestyle='', ms=18, 
                      label=name, mec='none', 
@@ -499,15 +503,11 @@ for name, group in groups:
     ax.axes.get_yaxis().set_visible(False)
 
 #ax.legend(numpoints=1) #show legend with only one dot
+# This tends to get in the way, but could work for some plots.
 ax.legend().set_visible(False)
 
-mpld3.display() #show the plot
+mpld3.save_html(fig, "similarityClusters.html")
 
-#uncomment the below to export to html
-html = mpld3.fig_to_html(fig)
-
-htmlfile = codecs.open("similarityClusters.html", "w", "utf-8")
-htmlfile.write(html)
-#print(html)
+print("TextHeatmapper.py has completed")
 
 #sys.exit()
