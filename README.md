@@ -86,4 +86,4 @@ K-pop video frames from top ~212 most-viewed videos on YouTube
 * 5,844 images
 * Matrix is symmetrical, using cosine similarity of 2,048 features from penultimate layer of Inception neural network
 * Matrix: http://babylon.library.ucla.edu/~broadwell/kpop/kpop_sim.tar.gz -- 10 MB compressed, 137 MB expanded
-* Matrix: http://babylon.library.ucla.edu/~broadwell/kpop/kpop_labels.txt -- labeled by YouTube ID, ordered by gender + year posted
+* Labels: http://babylon.library.ucla.edu/~broadwell/kpop/kpop_labels.txt -- labeled by YouTube ID, ordered by gender + year posted
