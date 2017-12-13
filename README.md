@@ -55,3 +55,24 @@ useCachedFiles variable to "False" or just manually deleting all .pkl files
 in the working directory.
 * The working directory may need to be set in the code in order for the script 
 to run successfully in Windows.
+
+## SAMPLE SIMILARITY MATRICES
+
+Nijūichidaishū - 21 Japanese imperial anthologies of *waka* poetry, 905-1439
+~38,000 poems, binned into roughy 10-poem bundles (actually 3331x3331)
+upper-left diagonal: 1/2/3-gram term cosine similarity; bottom-right diagonal: 100-topic LDA topic cosine similarity
+Matrix: http://babylon.library.ucla.edu/~broadwell/waka/merged_waka.tar.gz -- 48 MB compressed, 120 MB expanded
+Labels: http://babylon.library.ucla.edu/~broadwell/waka/dist_labels.txt -- labeled by anthology + genre
+
+The Evald Tang Kristensen archive of Danish folklore, ca. 1860-1920
+
+
+Arkiv for Dansk litteratur (Danish literature archive), 1170-1925 (most between 1500-1925)
+1691 bundles of a much larger number of texts in a mix of genres: novels, poetry, stage works
+Bundled primarily by author
+Matrix is symmetrical, using 1/2/3-gram term cosine similarity
+Matrix: http://babylon.library.ucla.edu/~broadwell/adl_sim/adl_sim.tar.gz
+Labels: http://babylon.library.ucla.edu/~broadwell/adl_sim/dist_labels.txt -- labeled by author + work
+
+Manga cover images from the Manga Cover Database (https://mcd.iosphe.re/)
+ -- 20 MB compressed, 278 MB expanded
