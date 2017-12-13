@@ -59,20 +59,31 @@ to run successfully in Windows.
 ## SAMPLE SIMILARITY MATRICES
 
 Nijūichidaishū - 21 Japanese imperial anthologies of *waka* poetry, 905-1439
-~38,000 poems, binned into roughy 10-poem bundles (actually 3331x3331)
-upper-left diagonal: 1/2/3-gram term cosine similarity; bottom-right diagonal: 100-topic LDA topic cosine similarity
-Matrix: http://babylon.library.ucla.edu/~broadwell/waka/merged_waka.tar.gz -- 48 MB compressed, 120 MB expanded
-Labels: http://babylon.library.ucla.edu/~broadwell/waka/dist_labels.txt -- labeled by anthology + genre
+* ~38,000 poems, binned into roughy 10-poem bundles (matrix is 3331x3331)
+* upper-left diagonal: 1/2/3-gram term cosine similarity; bottom-right diagonal: 100-topic LDA topic cosine similarity
+* Matrix: http://babylon.library.ucla.edu/~broadwell/waka/merged_waka.tar.gz -- 48 MB compressed, 120 MB expanded
+* Labels: http://babylon.library.ucla.edu/~broadwell/waka/dist_labels.txt -- labeled and ordered by anthology + genre
 
 The Evald Tang Kristensen archive of Danish folklore, ca. 1860-1920
-
+* 31,088 stories, binned into roughly 15-story bundles (matrix is 1869x1869)
+* upper-left diagonal: 1/2/3-gram term cosine similarity; bottom-right diagonal: 100-topic LDA topic cosine similarity
+* Matrix: http://etkspace.scandinavian.ucla.edu/~broadwell/etksim/etk_merged.tar.gz -- 17 MB compressed, 52 MB expanded
+* Labels: http://etkspace.scandinavian.ucla.edu/~broadwell/etksim/dist_labels.txt -- labeled and ordered by collection + volume + genre
 
 Arkiv for Dansk litteratur (Danish literature archive), 1170-1925 (most between 1500-1925)
-1691 bundles of a much larger number of texts in a mix of genres: novels, poetry, stage works
-Bundled primarily by author
-Matrix is symmetrical, using 1/2/3-gram term cosine similarity
-Matrix: http://babylon.library.ucla.edu/~broadwell/adl_sim/adl_sim.tar.gz
-Labels: http://babylon.library.ucla.edu/~broadwell/adl_sim/dist_labels.txt -- labeled by author + work
+* 1691 bundles of a much larger number of texts in a mix of genres: novels, poetry, stage works
+* Matrix is symmetrical, using 1/2/3-gram term cosine similarity
+* Matrix: http://babylon.library.ucla.edu/~broadwell/adl_sim/adl_sim.tar.gz -- 18 MB compressed, 43 MB expanded
+* Labels: http://babylon.library.ucla.edu/~broadwell/adl_sim/dist_labels.txt -- labeled and ordered by date + author + work
 
 Manga cover images from the Manga Cover Database (https://mcd.iosphe.re/)
- -- 20 MB compressed, 278 MB expanded
+* 8,337 cover images
+* Matrix is symmetrical, using cosine similarity of 2,048 features from penultimate layer of Inception neural network
+* Matrix: http://babylon.library.ucla.edu/~broadwell/manga_sim/manga_sim.tar.gz  -- 20 MB compressed, 278 MB expanded
+* Labels: http://babylon.library.ucla.edu/~broadwell/manga_sim/dist_labels.txt -- labeled by title, ordered by audience/genre, essentially women-men-girls-boys
+
+K-pop video frames from top ~212 most-viewed videos on YouTube
+* 5,844 images
+* Matrix is symmetrical, using cosine similarity of 2,048 features from penultimate layer of Inception neural network
+* Matrix: http://babylon.library.ucla.edu/~broadwell/kpop/kpop_sim.tar.gz -- 10 MB compressed, 137 MB expanded
+* Matrix: http://babylon.library.ucla.edu/~broadwell/kpop/kpop_labels.txt -- labeled by YouTube ID, ordered by gender + year posted
