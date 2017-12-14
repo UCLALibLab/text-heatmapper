@@ -58,7 +58,7 @@ to run successfully in Windows.
 
 ## SAMPLE SIMILARITY MATRICES
 
-**Note:** Matrices are tab-delimited, should have values only between 0 and 1. Labels files have one matrix colum/row label per line and should be in UTF-8 encoding.
+**Note:** Labels files have one matrix colum/row label per line and should be in UTF-8 encoding. Matrices should have values only between 0 and 1 and should be tab-delimited, **but the sample files below are actually comma-delimited** to make them more usable with other tools.
 
 Nijūichidaishū - 21 Japanese imperial anthologies of *waka* poetry, 905-1439
 * ~38,000 poems, binned into roughy 10-poem bundles (matrix is 3331x3331)
